@@ -45,6 +45,7 @@ public class Main2Activity extends AppCompatActivity {
         Main2Adapter main2Adapter = new Main2Adapter(this, getData());
         GridLayoutManager manager = new GridLayoutManager(this, 1);
         mRlvContent.setLayoutManager(manager);
+        mRlvContent.setNestedScrollingEnabled(false);
         mRlvContent.setAdapter(main2Adapter);
         main2Adapter.setOnItemClickListener(new Main2Adapter.OnItemClickListener() {
             @Override
@@ -71,7 +72,7 @@ public class Main2Activity extends AppCompatActivity {
                     Toast.makeText(Main2Activity.this, "请输入评论内容", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                setViewTreeObserver();
+//                setViewTreeObserver();
             }
         });
     }

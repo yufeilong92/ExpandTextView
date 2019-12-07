@@ -74,7 +74,10 @@ public class MainActivity extends AppCompatActivity implements CircleAdapter.MyC
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        //如果是noactionbar 模式请加上这个
+//        window.decorView.systemUiVisibility = SYSTEM_UI_FLAG_VISIBLE
         setContentView(R.layout.activity_main);
         initViews();
         initData();
